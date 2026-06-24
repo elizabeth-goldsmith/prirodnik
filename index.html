@@ -833,8 +833,11 @@
             </div>
             <div class="form-group">
               <label for="food">Твои предпочтения в еде</label>
-              <input type="text" id="food" name="food" required placeholder="Мясоед / Вегетарианец / Всё подряд">
-              <span class="error">Пожалуйста, укажи свои предпочтения</span>
+              <select id="food" name="food" required>
+                <option value="">Выбери предпочтение</option>
+                <option value="Мясное">Мясное</option>
+                <option value="Вегетарианское">Вегетарианское</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="tent">Твой вариант с палаткой</label>
