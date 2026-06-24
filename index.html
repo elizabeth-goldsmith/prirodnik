@@ -939,16 +939,19 @@
               food: document.querySelector('#food').value,
               tent: document.querySelector('#tent').value
             };
+            var params = new URLSearchParams({
+              name: formData.name,
+              tg: formData.tg,
+              tariff: formData.tariff,
+              food: formData.food,
+              tent: formData.tent
+            });
             fetch('https://script.google.com/macros/s/AKfycbxd3n1PCQ6bBmF_MVwTYYKrZ0FG08gHGI8cH5VTa64zQlZP9PXDoo_Zxaw7Xa7RY6bd/exec', {
               method: 'POST',
-              mode: 'no-cors',
-              body: JSON.stringify(formData)
-            }).then(function() {
-              alert('Спасибо! Мы свяжемся с тобой в ближайшее время.');
-              form.reset();
-            }).catch(function() {
-              alert('Ошибка отправки. Попробуй ещё раз.');
+              body: params
             });
+            alert('Спасибо! Мы свяжемся с тобой в ближайшее время.');
+            form.reset();
           }
         });
       }
