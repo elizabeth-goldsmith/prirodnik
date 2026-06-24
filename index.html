@@ -933,7 +933,7 @@
           });
           if (!hasError) {
              var token = '8417758323:AAG9deNL6i57BfgxSXXf0NhOWqKPvQlf5aw';
-             var chatId = '-5363072673';
+             var chatId = '-1004370536820';
              var tentLabels = { own: 'Своя', share: 'Ищу место', day: 'Только на день' };
              var msg = 'Новая регистрация:\nИмя: ' + document.querySelector('#name').value + '\nTelegram: ' + document.querySelector('#tg').value + '\nТариф: ' + document.querySelector('#tariff').value + '\nЕда: ' + document.querySelector('#food').value + '\nПалатка: ' + (tentLabels[document.querySelector('#tent').value] || document.querySelector('#tent').value);
              fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
