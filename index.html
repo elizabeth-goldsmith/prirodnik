@@ -941,7 +941,7 @@
             };
             fetch('https://script.google.com/macros/s/AKfycbxd3n1PCQ6bBmF_MVwTYYKrZ0FG08gHGI8cH5VTa64zQlZP9PXDoo_Zxaw7Xa7RY6bd/exec', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
+              mode: 'no-cors',
               body: JSON.stringify(formData)
             }).then(function() {
               alert('Спасибо! Мы свяжемся с тобой в ближайшее время.');
