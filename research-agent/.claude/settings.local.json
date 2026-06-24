@@ -1,0 +1,25 @@
+{
+  "env": {
+    "DEFAULT_SEARCH_LANG": "ru",
+    "RESEARCH_DIR": "/Users/liza/research-agent"
+  },
+  "permissions": {
+    "allow": [
+      "WebSearch(*)",
+      "WebFetch(*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)"
+    ],
+    "deny": [
+      "Bash(git push:*)",
+      "Bash(git push --force:*)",
+      "Bash(curl:--request DELETE*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "brave-search"
+  ],
+  "enableAllProjectMcpServers": true
+}

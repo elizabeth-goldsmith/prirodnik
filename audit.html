@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аудит папки ai-lessons</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; background: linear-gradient(135deg, #58a6ff, #a371f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: #8b949e; margin-bottom: 2rem; font-size: 1.1rem; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card {
+      background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .stat-card:hover { transform: translateY(-2px); border-color: #58a6ff; }
+    .stat-value { font-size: 2.5rem; font-weight: 700; color: #58a6ff; }
+    .stat-label { color: #8b949e; font-size: 0.9rem; margin-top: 0.25rem; }
+    .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+    .chart-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.5rem; }
+    .chart-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; color: #e6edf3; }
+    .chart-wrapper { height: 350px; position: relative; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 0.875rem 1rem; text-align: left; border-bottom: 1px solid #21262d; }
+    th { color: #8b949e; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    tr:hover { background: #161b22; }
+    .size-badge { font-family: 'SF Mono', monospace; color: #58a6ff; font-weight: 600; }
+    .path-cell { font-family: 'SF Mono', monospace; font-size: 0.8rem; color: #8b949e; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .file-type { display: inline-block; padding: 0.15rem 0.5rem; background: #21262d; border-radius: 4px; font-size: 0.75rem; color: #a371f7; }
+    @media (max-width: 768px) { .charts-grid { grid-template-columns: 1fr; } .stat-value { font-size: 2rem; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Аудит папки ai-lessons</h1>
+    <p class="subtitle">Анализ структуры файлов • 475 файлов • Последнее обновление: 18 мая 2026</p>
+
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-value">475</div><div class="stat-label">Всего файлов</div></div>
+      <div class="stat-card"><div class="stat-value">211</div><div class="stat-label">Markdown (.md)</div></div>
+      <div class="stat-card"><div class="stat-value">88</div><div class="stat-label">JSON файлы</div></div>
+      <div class="stat-card"><div class="stat-value">11.6 MB</div><div class="stat-label">Самый большой файл</div></div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-title">Распределение по типам файлов (топ-12)</div>
+        <div class="chart-wrapper"><canvas id="typeChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Размер топ-10 файлов (MB)</div>
+        <div class="chart-wrapper"><canvas id="sizeChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Самые большие файлы (топ-20)</div>
+      <table id="filesTable">
+        <thead>
+          <tr><th>#</th><th>Размер</th><th>Тип</th><th>Путь</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const fileTypes = [
+      {ext: '.md', count: 211},
+      {ext: '.json', count: 88},
+      {ext: '.jsonl', count: 32},
+      {ext: '.py', count: 22},
+      {ext: '.sh', count: 17},
+      {ext: '.png', count: 9},
+      {ext: '.DS_Store', count: 7},
+      {ext: '.log', count: 6},
+      {ext: '.xlsx', count: 5},
+      {ext: '.ts', count: 4},
+      {ext: '.npmrc', count: 4},
+      {ext: '.lock', count: 4}
+    ];
+
+    const largeFiles = [
+      {size: 11624102, path: '.claude/projects/-Users-liza-ai-lessons/824eb945-55b8-41ef-95ae-34e8017fb37d.jsonl', type: '.jsonl'},
+      {size: 4344317, path: 'mortgage reports/2025 — home-buyers — report.pdf', type: '.pdf'},
+      {size: 555521, path: '.claude/plugins/.../revise-claude-md-example.png', type: '.png'},
+      {size: 550043, path: 'SEO analysis/nevatrip-tablet.png', type: '.png'},
+      {size: 545204, path: '.claude/plugins/.../automation-recommender-example.png', type: '.png'},
+      {size: 518778, path: '.claude/plugins/.../claude-md-improver-example.png', type: '.png'},
+      {size: 307500, path: '.playwright-mcp/page-2026-05-18T19-08-02-362Z.yml', type: '.yml'},
+      {size: 293471, path: 'SEO analysis/nevatrip-desktop.png', type: '.png'},
+      {size: 197293, path: 'SEO analysis/nevatrip-mobile.png', type: '.png'},
+      {size: 163750, path: 'SEO analysis/screenshot-desktop.png', type: '.png'},
+      {size: 143046, path: 'SEO analysis/screenshot-tablet.png', type: '.png'},
+      {size: 120934, path: 'reference/mortgage — glossary — reference.docx', type: '.docx'},
+      {size: 116011, path: 'mortgage reports/2025 — home-buyers — report.md', type: '.md'},
+      {size: 97095, path: '.claude/plugins/.../marketplace.json', type: '.json'},
+      {size: 96053, path: 'SEO analysis/network-requests.log', type: '.log'},
+      {size: 72480, path: 'SEO analysis/screenshot-mobile.png', type: '.png'},
+      {size: 55021, path: '.claude/projects/.../b4c2314b-517f-491f-abd6-76fe2ba54822.jsonl', type: '.jsonl'},
+      {size: 53964, path: 'SEO analysis/snapshot-desktop.md', type: '.md'},
+      {size: 44998, path: '.claude/plugins/.../viewer.html', type: '.html'},
+      {size: 43543, path: '.playwright-mcp/page-2026-05-18T18-06-57-157Z.yml', type: '.yml'}
+    ];
+
+    const colors = ['#58a6ff', '#a371f7', '#f78166', '#7ee787', '#ffa657', '#ff7b72', '#79c0ff', '#d2a8ff', '#ffd33d', '#ff7f00', '#a5d6ff', '#d29922'];
+
+    new Chart(document.getElementById('typeChart'), {
+      type: 'doughnut',
+      data: {
+        labels: fileTypes.map(f => f.ext),
+        datasets: [{
+          data: fileTypes.map(f => f.count),
+          backgroundColor: colors,
+          borderWidth: 0,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'right', labels: { color: '#e6edf3', font: { size: 11 }, padding: 12, usePointStyle: true } },
+          tooltip: { backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1, padding: 12 }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('sizeChart'), {
+      type: 'bar',
+      data: {
+        labels: largeFiles.slice(0, 10).map((f, i) => `${i + 1}`),
+        datasets: [{
+          label: 'Размер (MB)',
+          data: largeFiles.slice(0, 10).map(f => (f.size / 1024 / 1024).toFixed(2)),
+          backgroundColor: 'rgba(88, 166, 255, 0.7)',
+          borderColor: '#58a6ff',
+          borderWidth: 1,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#161b22', titleColor: '#e6edf3', bodyColor: '#e6edf3', borderColor: '#30363d', borderWidth: 1,
+            callbacks: { label: ctx => `${ctx.raw} MB — ${largeFiles[ctx.dataIndex].path}` }
+          }
+        },
+        scales: {
+          x: { grid: { color: '#21262d' }, ticks: { color: '#8b949e' } },
+          y: { grid: { display: false }, ticks: { color: '#8b949e', font: { size: 11 } } }
+        }
+      }
+    });
+
+    const tbody = document.querySelector('#filesTable tbody');
+    largeFiles.forEach((f, i) => {
+      const mb = (f.size / 1024 / 1024).toFixed(2);
+      const kb = (f.size / 1024).toFixed(1);
+      const displaySize = f.size >= 1024*1024 ? `${mb} MB` : `${kb} KB`;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${i + 1}</td><td class="size-badge">${displaySize}</td><td><span class="file-type">${f.type}</span></td><td class="path-cell" title="${f.path}">${f.path}</td>`;
+      tbody.appendChild(tr);
+    });
+  </script>
+</body>
+</html>

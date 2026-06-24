@@ -1,0 +1,13 @@
+{
+  "fcp": 7536,
+  "lcp": null,
+  "ttfb": 546.8000000119209,
+  "domContentLoaded": 1229.1000000238419,
+  "loadComplete": 5255.600000023842,
+  "transferSize": 103413,
+  "jsSize": 507285,
+  "cssSize": 560521,
+  "imgSize": 244060,
+  "totalResources": 121,
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+}

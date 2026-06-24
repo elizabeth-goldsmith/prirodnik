@@ -1,0 +1,335 @@
+{
+  "title": "Практический курс по вайб-кодингу на Claude Code",
+  "description": "Вы полностью освоите один из самых хайповых и востребованных инструментов вайб-кодинга в мире! И выполните 10+ проектов всего за 4 недели! От скриптов для автоматического наведения порядка в файлах до полноценных ИИ-ботов и веб-приложений.",
+  "ogTitle": "Практический курс по вайб-кодингу на Claude Code",
+  "ogImage": "https://static.tildacdn.com/tild6330-6532-4435-a334-653762363336/__Tilda.png",
+  "ogUrl": "https://zerocoder.ru/course-claude-code",
+  "ogType": "website",
+  "canonical": "https://zerocoder.ru/course-claude-code",
+  "robots": null,
+  "viewport": "width=device-width, initial-scale=1.0",
+  "lang": null,
+  "charset": "UTF-8",
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "БАЗОВЫЙ"
+    },
+    {
+      "tag": "H1",
+      "text": "БИЗНЕС"
+    },
+    {
+      "tag": "H1",
+      "text": "ВИП"
+    },
+    {
+      "tag": "H2",
+      "text": "ПРОВОДИМ ИССЛЕДОВАНИЯ ПО ИИ СОВМЕСТНО С ЛУЧШИМИ ВУЗАМИ СТРАНЫ"
+    },
+    {
+      "tag": "H2",
+      "text": "НАШИ ПРЕМИИ И РЕЙТИНГИ"
+    },
+    {
+      "tag": "H2",
+      "text": "Нужна консультация по обучению?"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://zerocoder.ru/neuro-subscription?param=popup",
+      "text": "УЗНАТЬ ПОДРОБНЕЕ",
+      "isExternal": false
+    },
+    {
+      "href": "#program",
+      "text": "УЗНАТЬ ПОДРОБНЕЕ",
+      "isExternal": false
+    },
+    {
+      "href": "#tariff",
+      "text": "ОСТАВИТЬ ЗАЯВКУ",
+      "isExternal": false
+    },
+    {
+      "href": null,
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": "#tariff",
+      "text": "ОСТАВИТЬ ЗАЯВКУ",
+      "isExternal": false
+    },
+    {
+      "href": "#tariff",
+      "text": "ВЫБРАТЬ ТАРИФ",
+      "isExternal": false
+    },
+    {
+      "href": null,
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": null,
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": "#popup:base",
+      "text": "ОСТАВИТЬ ЗАЯВКУ",
+      "isExternal": false
+    },
+    {
+      "href": "#popup:business",
+      "text": "ОСТАВИТЬ ЗАЯВКУ",
+      "isExternal": false
+    },
+    {
+      "href": "#popup:vip",
+      "text": "ОСТАВИТЬ ЗАЯВКУ",
+      "isExternal": false
+    },
+    {
+      "href": "#popup:scroll",
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": "#tariff",
+      "text": "Присоединиться",
+      "isExternal": false
+    },
+    {
+      "href": "#popup:call",
+      "text": "Получить консультацию",
+      "isExternal": false
+    },
+    {
+      "href": "/",
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": "/experts",
+      "text": "Преподаватели",
+      "isExternal": false
+    },
+    {
+      "href": "/news",
+      "text": "Новости и события",
+      "isExternal": false
+    },
+    {
+      "href": "/neyroseti-dlya-raboty",
+      "text": "Корпоративное обучение",
+      "isExternal": false
+    },
+    {
+      "href": "/partners",
+      "text": "Партнерство",
+      "isExternal": false
+    },
+    {
+      "href": "/privacy",
+      "text": "Политика конфиденциальности",
+      "isExternal": false
+    },
+    {
+      "href": "/safety",
+      "text": "Политика безопасности платежей",
+      "isExternal": false
+    },
+    {
+      "href": "/terms",
+      "text": "Оферта",
+      "isExternal": false
+    },
+    {
+      "href": "https://islod.obrnadzor.gov.ru/rlic/details/0c9b345a-fc50-43c8-7248-1dc5987f2d33/",
+      "text": "Лицензия на образовательную деятельность",
+      "isExternal": true
+    },
+    {
+      "href": "mailto:care@zerocoder.ru",
+      "text": "care@zerocoder.ru",
+      "isExternal": false
+    },
+    {
+      "href": "tel:+79393283812",
+      "text": "+7 (939) 328-38-12",
+      "isExternal": false
+    },
+    {
+      "href": "https://t.me/zerocoder_event",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "https://api.whatsapp.com/send/?phone=79933775209&text&type=phone_number&app_absent=0",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "https://university.zerocoder.ru/pl/maxstart?botId=491",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "https://www.youtube.com/channel/UC4neEzJcEQPjspfHcu8xgaQ",
+      "text": "",
+      "isExternal": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://optim.tildacdn.com/tild3830-3133-4138-a339-626266353464/-/format/webp/noroot.png.webp",
+      "alt": "",
+      "width": 691,
+      "height": 1126
+    },
+    {
+      "src": "https://optim.tildacdn.com/tild3830-3133-4138-a339-626266353464/-/format/webp/noroot.png.webp",
+      "alt": "",
+      "width": 691,
+      "height": 1126
+    },
+    {
+      "src": "https://optim.tildacdn.com/tild6432-3535-4266-b931-326332366363/-/resize/742x/-/format/webp/image_76.png.webp",
+      "alt": "",
+      "width": 742,
+      "height": 742
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild6661-6337-4464-a639-316230393266/-/resize/20x/Rectangle_48.png",
+      "alt": "",
+      "width": 20,
+      "height": 30
+    },
+    {
+      "src": "https://optim.tildacdn.com/tild3962-3466-4263-a262-666636613863/-/resize/196x/-/format/webp/Rectangle_41.png.webp",
+      "alt": "",
+      "width": 196,
+      "height": 278
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3839-6565-4730-b135-613132643032/-/resize/20x/noroot.png",
+      "alt": "",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild6331-6231-4435-a162-333037373431/-/resize/20x/noroot.png",
+      "alt": "",
+      "width": 20,
+      "height": 18
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3738-3030-4464-a532-306462346466/-/resize/20x/noroot.png",
+      "alt": "",
+      "width": 20,
+      "height": 19
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3837-3537-4465-b664-396665316166/-/resize/20x/noroot.png",
+      "alt": "",
+      "width": 20,
+      "height": 19
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3930-6430-4539-b664-346132623964/-/resize/20x/noroot.png",
+      "alt": "",
+      "width": 20,
+      "height": 22
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3837-6163-4761-b733-316435383864/-/resize/20x/dca1e846-2223-456c-b.png",
+      "alt": "",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild6337-3830-4437-a364-336363616335/-/resize/20x/noroot.png",
+      "alt": "",
+      "width": 20,
+      "height": 19
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3838-3535-4434-b863-366434313765/-/resize/20x/noroot.png",
+      "alt": "",
+      "width": 20,
+      "height": 20
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild6361-3763-4534-a239-663636353061/-/resize/20x/image.png",
+      "alt": "",
+      "width": 20,
+      "height": 14
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3361-6432-4935-a537-353135666464/-/resize/20x/image_2.png",
+      "alt": "",
+      "width": 20,
+      "height": 28
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3538-3233-4665-b265-376531656638/-/resize/20x/image.png",
+      "alt": "",
+      "width": 20,
+      "height": 28
+    },
+    {
+      "src": "https://optim.tildacdn.com/tild3737-3064-4262-b866-626135303136/-/resize/722x/-/format/webp/noroot.png.webp",
+      "alt": "",
+      "width": 722,
+      "height": 722
+    },
+    {
+      "src": "https://static.tildacdn.com/tild3736-3332-4466-b165-666134666665/export-container.svg",
+      "alt": "",
+      "width": 182,
+      "height": 120
+    },
+    {
+      "src": "https://thb.tildacdn.com/tild3262-6135-4663-b362-633739336138/-/resize/20x/Sk__-block-mono-cont.png",
+      "alt": "",
+      "width": 20,
+      "height": 5
+    },
+    {
+      "src": "https://static.tildacdn.com/tild3566-3664-4563-b132-333333336431/Frame_577.svg",
+      "alt": "",
+      "width": 40,
+      "height": 40
+    },
+    {
+      "src": "https://static.tildacdn.com/tild6337-3764-4431-b139-323365363832/Frame_578.svg",
+      "alt": "",
+      "width": 40,
+      "height": 40
+    },
+    {
+      "src": "https://static.tildacdn.com/tild3431-3438-4439-a334-363037663663/Frame_579.svg",
+      "alt": "",
+      "width": 40,
+      "height": 40
+    },
+    {
+      "src": "https://static.tildacdn.com/tild6333-3030-4437-b564-386262663034/Frame_580.svg",
+      "alt": "",
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "wordCount": 1894,
+  "internalLinks": 9,
+  "externalLinks": 5,
+  "brokenAltImages": 23,
+  "jsonLdCount": 0,
+  "schemaScripts": [],
+  "favicon": "https://static.tildacdn.com/tild3339-3166-4961-a434-336135383966/favicon.ico",
+  "mobileFriendly": false,
+  "url": "https://zerocoder.ru/course-claude-code"
+}

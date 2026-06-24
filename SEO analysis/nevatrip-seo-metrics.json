@@ -1,0 +1,616 @@
+{
+  "title": "Водные экскурсии в Санкт-Петербурге 2026 — маршруты, цены и расписание",
+  "description": "Водные экскурсии в Санкт-Петербурге: маршруты по Неве и каналам, цены, расписание, варианты прогулок. Выберите подходящий формат и забронируйте онлайн.",
+  "ogTitle": "Водные прогулки и экскурсии по Петербургу",
+  "ogImage": "https://nevatrip.ru/assets/img/e/nevatrip/bg.jpg",
+  "ogUrl": "https://nevatrip.ru/",
+  "ogType": "website",
+  "ogLocale": null,
+  "twitterCard": "summary_large_image",
+  "twitterTitle": "Водные прогулки и экскурсии по Петербургу",
+  "twitterImage": "https://nevatrip.ru/assets/img/e/nevatrip/bg.jpg",
+  "canonical": "https://nevatrip.ru/",
+  "robots": null,
+  "viewport": "width=device-width, initial-scale=1",
+  "lang": "ru",
+  "charset": "UTF-8",
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Водные прогулки и экскурсии по Петербургу"
+    },
+    {
+      "tag": "H2",
+      "text": "Почему Nevatrip?"
+    },
+    {
+      "tag": "H2",
+      "text": "Почему Nevatrip?"
+    },
+    {
+      "tag": "H2",
+      "text": "Популярные маршруты"
+    },
+    {
+      "tag": "H3",
+      "text": "По Неве и каналам"
+    },
+    {
+      "tag": "H3",
+      "text": "Ночные маршруты и развод мостов"
+    },
+    {
+      "tag": "H3",
+      "text": "Дневные маршруты и метеоры"
+    },
+    {
+      "tag": "H3",
+      "text": "Аренда катера, яхты или теплохода"
+    },
+    {
+      "tag": "H2",
+      "text": "Как выбрать подходящий маршрут"
+    },
+    {
+      "tag": "H2",
+      "text": "Цены и условия бронирования"
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": "https://www.instagram.com/nevatrip.ru/",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "https://vk.com/nevatrip",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "https://www.youtube.com/channel/UC3vCmQx4KRNwAhllZZU9n0Q",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "https://t.me/NevatripBot?start=utm9",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "mailto:info@nevatrip.ru",
+      "text": "info@nevatrip.ru",
+      "isExternal": false
+    },
+    {
+      "href": "tel:88122132424",
+      "text": "+7 (812) 213-24-24",
+      "isExternal": false
+    },
+    {
+      "href": "/day",
+      "text": "Дневные экскурсии",
+      "isExternal": false
+    },
+    {
+      "href": "/night",
+      "text": "Ночные прогулки",
+      "isExternal": false
+    },
+    {
+      "href": "/meteors",
+      "text": "Метеоры",
+      "isExternal": false
+    },
+    {
+      "href": "/restoran-na-teplohode",
+      "text": "Теплоходы-рестораны",
+      "isExternal": false
+    },
+    {
+      "href": "/arenda",
+      "text": "Аренда",
+      "isExternal": false
+    },
+    {
+      "href": "/cruises",
+      "text": "Круизы",
+      "isExternal": false
+    },
+    {
+      "href": "/certificate-info",
+      "text": "Сертификат",
+      "isExternal": false
+    },
+    {
+      "href": "tel:+78122132424",
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": "https://t.me/NevatripBot?start=utm9",
+      "text": "",
+      "isExternal": true
+    },
+    {
+      "href": "https://nevatrip.ru/o-nas",
+      "text": "О нас",
+      "isExternal": false
+    },
+    {
+      "href": "/faq",
+      "text": "FAQ",
+      "isExternal": false
+    },
+    {
+      "href": "/oferta",
+      "text": "Оферта",
+      "isExternal": false
+    },
+    {
+      "href": "/blog",
+      "text": "Наш Блог",
+      "isExternal": false
+    },
+    {
+      "href": "/kak-kupit-bilet",
+      "text": "Как купить билет",
+      "isExternal": false
+    },
+    {
+      "href": "/sotrudnichestvo",
+      "text": "Сотрудничество",
+      "isExternal": false
+    },
+    {
+      "href": "/yachting",
+      "text": "Яхтинг в Санкт-Петербурге",
+      "isExternal": false
+    },
+    {
+      "href": "/charter",
+      "text": "Чартер катеров и яхт",
+      "isExternal": false
+    },
+    {
+      "href": "/avtobusnye-ehkskursii",
+      "text": "Экскурсии на автобусах",
+      "isExternal": false
+    },
+    {
+      "href": "/houseboats",
+      "text": "Дома на воде в Петербурге",
+      "isExternal": false
+    },
+    {
+      "href": "/msk/arenda-houseboat",
+      "text": "Дома на воде в Москве",
+      "isExternal": false
+    },
+    {
+      "href": "/arenda/loft",
+      "text": "Аренда лофтов для мероприятий",
+      "isExternal": false
+    },
+    {
+      "href": "/active",
+      "text": "Активный отдых на воде",
+      "isExternal": false
+    },
+    {
+      "href": "/prichaly-sankt-peterburga",
+      "text": "Причалы Санкт-Петербурга",
+      "isExternal": false
+    },
+    {
+      "href": "/sights",
+      "text": "Достопримечательности",
+      "isExternal": false
+    },
+    {
+      "href": "/day",
+      "text": "Дневные экскурсии",
+      "isExternal": false
+    },
+    {
+      "href": "/night",
+      "text": "Ночные прогулки",
+      "isExternal": false
+    },
+    {
+      "href": "/meteors",
+      "text": "Метеоры в пригороды",
+      "isExternal": false
+    },
+    {
+      "href": "/restoran-na-teplohode",
+      "text": "Ресторан на теплоходе",
+      "isExternal": false
+    },
+    {
+      "href": "/arenda",
+      "text": "Аренда и мероприятия",
+      "isExternal": false
+    },
+    {
+      "href": "/charter",
+      "text": "Чартер катеров и яхт",
+      "isExternal": false
+    },
+    {
+      "href": "/cruises",
+      "text": "Круизы по России",
+      "isExternal": false
+    },
+    {
+      "href": "/yachting",
+      "text": "Яхтинг под парусом",
+      "isExternal": false
+    },
+    {
+      "href": "/houseboats",
+      "text": "Дома на воде",
+      "isExternal": false
+    },
+    {
+      "href": "/msk/arenda-houseboat",
+      "text": "Хаусботы в Москве",
+      "isExternal": false
+    },
+    {
+      "href": "/avtobusnye-ehkskursii",
+      "text": "Автобусные экскурсии",
+      "isExternal": false
+    },
+    {
+      "href": "/certificate-info",
+      "text": "Сертификат в подарок",
+      "isExternal": false
+    },
+    {
+      "href": "/active",
+      "text": "Активный отдых",
+      "isExternal": false
+    },
+    {
+      "href": "/prichaly-sankt-peterburga",
+      "text": "Причалы Петербурга",
+      "isExternal": false
+    },
+    {
+      "href": "/sights",
+      "text": "Достопримечательности",
+      "isExternal": false
+    },
+    {
+      "href": "/blog",
+      "text": "Наш Блог",
+      "isExternal": false
+    },
+    {
+      "href": "https://nevatrip.ru/o-nas",
+      "text": "О нас",
+      "isExternal": false
+    },
+    {
+      "href": "/faq",
+      "text": "FAQ",
+      "isExternal": false
+    },
+    {
+      "href": "/oferta",
+      "text": "Оферта",
+      "isExternal": false
+    },
+    {
+      "href": "/kak-kupit-bilet",
+      "text": "Как купить билет",
+      "isExternal": false
+    },
+    {
+      "href": "/sotrudnichestvo",
+      "text": "Сотрудничество",
+      "isExternal": false
+    },
+    {
+      "href": "/day/progulka-na-katere-so-skidkoy-spb",
+      "text": "ПЕРВЫЙ ГРУППОВОЙ ТУР НА VIP-КАТЕРЕ",
+      "isExternal": false
+    },
+    {
+      "href": "/day/progulka-na-katere-so-skidkoy-spb",
+      "text": "Прогулка на катере Blackberry со скидкой в подарок",
+      "isExternal": false
+    },
+    {
+      "href": "/buy?id=2194&utm_medium=nearcruisepreview",
+      "text": "10:00",
+      "isExternal": false
+    },
+    {
+      "href": "/day/progulka-na-katere-so-skidkoy-spb",
+      "text": "Подробнее",
+      "isExternal": false
+    },
+    {
+      "href": "/day/progulka-po-neve-na-zakate-s-vyxodom-v-finskii-zaliv-i-zivoi-muzykoi",
+      "text": "",
+      "isExternal": false
+    },
+    {
+      "href": "/day/progulka-po-neve-na-zakate-s-vyxodom-v-finskii-zaliv-i-zivoi-muzykoi",
+      "text": "Прогулка по Неве на закате с живой музыкой",
+      "isExternal": false
+    },
+    {
+      "href": "/buy?id=1990&utm_medium=nearcruisepreview",
+      "text": "20:30",
+      "isExternal": false
+    },
+    {
+      "href": "/day/progulka-po-neve-na-zakate-s-vyxodom-v-finskii-zaliv-i-zivoi-muzykoi",
+      "text": "Подробнее",
+      "isExternal": false
+    }
+  ],
+  "images": [
+    {
+      "src": "/assets/img/nevatrip_logo.svg",
+      "alt": "nevatrip.ru",
+      "width": 200,
+      "height": 38
+    },
+    {
+      "src": "/assets/img/icons/topbar/inst-circle-blue.svg",
+      "alt": "inst-circle-blue",
+      "width": 144,
+      "height": 150
+    },
+    {
+      "src": "/assets/img/icons/topbar/vk-circle-blue.svg",
+      "alt": "vk-circle-blue",
+      "width": 144,
+      "height": 150
+    },
+    {
+      "src": "/assets/img/icons/topbar/youtube-circle-blue.svg",
+      "alt": "youtube-circle-blue",
+      "width": 145,
+      "height": 150
+    },
+    {
+      "src": "/assets/img/icons/topbar/telegram-circle-blue.svg",
+      "alt": "telegram-circle-blue",
+      "width": 144,
+      "height": 150
+    },
+    {
+      "src": "/assets/img/icons/topbar/mail-gray.svg",
+      "alt": "mail-gray",
+      "width": 14,
+      "height": 11
+    },
+    {
+      "src": "/assets/img/icons/topbar/phone-gray.svg",
+      "alt": "phone-gray",
+      "width": 14,
+      "height": 15
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/about-us.svg",
+      "alt": "about-us",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/faq.svg",
+      "alt": "faq",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/oferta.svg",
+      "alt": "oferta",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/heart.svg",
+      "alt": "heart",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/ticket.svg",
+      "alt": "ticket",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/cooperation.svg",
+      "alt": "cooperation",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/moscow_desk_blue.svg",
+      "alt": "moscow_desk_blue",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/sailboat.svg",
+      "alt": "sailboat",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/charter.svg",
+      "alt": "charter",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/bus.svg",
+      "alt": "bus",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/house.svg",
+      "alt": "house",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/house.svg",
+      "alt": "house",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/loft_3.svg",
+      "alt": "loft_3",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/boat.svg",
+      "alt": "boat",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/anchor.svg",
+      "alt": "anchor",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/sight.svg",
+      "alt": "sight",
+      "width": 12,
+      "height": 12
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/audio.svg",
+      "alt": "audio",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/balls.svg",
+      "alt": "balls",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/drop-down-desktop/anchor.svg",
+      "alt": "anchor",
+      "width": 13,
+      "height": 13
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/sunrise.svg",
+      "alt": "sunrise",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/night.svg",
+      "alt": "night",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/yacht.svg",
+      "alt": "yacht",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/restaurant.svg",
+      "alt": "restaurant",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/anchor.svg",
+      "alt": "anchor",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/charter.svg",
+      "alt": "charter",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/cruise.svg",
+      "alt": "cruise",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/sailboat.svg",
+      "alt": "sailboat",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/house.svg",
+      "alt": "house",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/house.svg",
+      "alt": "house",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/bus_button.svg",
+      "alt": "bus_button",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/heart.svg",
+      "alt": "heart",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/boat.svg",
+      "alt": "boat",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "/assets/img/icons/burger-menu-mobile/star.svg",
+      "alt": "star",
+      "width": 0,
+      "height": 0
+    }
+  ],
+  "wordCount": 8266,
+  "internalLinks": 729,
+  "externalLinks": 14,
+  "brokenAltImages": 0,
+  "jsonLdCount": 3,
+  "schemaScripts": [
+    "{\"@context\":\"https://schema.org\",\"@type\":\"SiteNavigationElement\",\"name\":[\"Дневные экскурсии\",\"Ночные прогулки\",\"Метеоры\",\"Теплоходы-рестораны\",\"Аренда\",\"Круизы\",\"Сертификат\"],\"url\":[\"/day\",\"/night\",\"/meteors\",\"/restoran-na-teplohode\",\"/arenda\",\"/cruises\",\"/certificate-info\"]}",
+    "[{\"@context\":\"https://schema.org\",\"@type\":\"Event\",\"name\":\"Прогулка на катере Blackberry со скидкой в подарок\",\"url\":\"https://nevatrip.ru/day/progulka-na-katere-so-skidkoy-spb\",\"eventAttendanceMode\":\"https://schema.org/OfflineEventAttendanceMode\",\"eventStatus\":\"https://schema.org/EventScheduled\",\"startDate\":\"2026-05-11\",\"endDate\":\"2026-10-31\",\"location\":{\"@type\":\"Place\",\"name\":\"Санкт-Петербург\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"набережная реки Фонтанки, 64 (мост Ломоносова)\",\"ad",
+    "{\"@context\":\"http://www.schema.org\",\"@type\":\"Organization\",\"name\":\"Nevatrip\",\"url\":\"https://nevatrip.ru/\",\"logo\":\"https://nevatrip.ru/assets/img/nevatrip_logo.svg\",\"image\":\"https://nevatrip.ru/assets/img/e/nevatrip/bg.jpg\",\"description\":\"&#9875; Неватрип — водные экскурсии по рекам и каналам Петербурга, Экскурсии по Неве, метеоры в Петергоф и Кронштадт, экскурсии по ночному Петербургу под развод мостов. &#127915; Прокатиться на кораблике можно купив билет. &#128077; Расписание, цены и маршруты н"
+  ],
+  "favicon": "/ref/favicons/nevatrip/favicon-32x32.png",
+  "mobileFriendly": false,
+  "url": "https://nevatrip.ru/"
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads Audit Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            min-height: 100vh;
+            padding: 32px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #58a6ff, #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #58a6ff;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #8b949e;
+            margin-top: 4px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-title::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(180deg, #58a6ff, #a371f7);
+            border-radius: 2px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        .file-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .file-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .file-list::-webkit-scrollbar-track {
+            background: #0d1117;
+            border-radius: 3px;
+        }
+
+        .file-list::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 3px;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-bottom: 1px solid #21262d;
+            transition: background 0.15s;
+        }
+
+        .file-item:last-child {
+            border-bottom: none;
+        }
+
+        .file-item:hover {
+            background: #1c2128;
+        }
+
+        .file-rank {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: #21262d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .file-rank.top3 {
+            background: linear-gradient(135deg, #58a6ff, #a371f7);
+            color: #0d1117;
+        }
+
+        .file-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .file-icon.audio { background: rgba(251, 113, 133, 0.15); color: #fb7185; }
+        .file-icon.image { background: rgba(34, 197, 94, 0.15); color: #22c55e; }
+        .file-icon.video { background: rgba(234, 179, 8, 0.15); color: #eab308; }
+        .file-icon.app { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
+        .file-icon.doc { background: rgba(96, 165, 250, 0.15); color: #60a5fa; }
+        .file-icon.folder { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+        .file-icon.other { background: rgba(156, 163, 175, 0.15); color: #9ca3af; }
+
+        .file-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .file-name {
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .file-type {
+            font-size: 12px;
+            color: #8b949e;
+            text-transform: uppercase;
+        }
+
+        .file-size {
+            font-size: 14px;
+            font-weight: 600;
+            color: #58a6ff;
+            margin-left: 16px;
+            flex-shrink: 0;
+        }
+
+        .type-legend {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        ::selection {
+            background: #58a6ff;
+            color: #0d1117;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Downloads Audit</h1>
+        <p class="subtitle">Анализ папки загрузок • 685 МБ • 114 файлов</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">114</div>
+                <div class="stat-label">Всего файлов</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">685 МБ</div>
+                <div class="stat-label">Общий размер</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">9</div>
+                <div class="stat-label">Типов файлов</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">14</div>
+                <div class="stat-label">Временных файлов Word</div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="card-title">Типы файлов</div>
+                <div class="chart-container">
+                    <canvas id="typeChart"></canvas>
+                </div>
+                <div class="type-legend" id="legend"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Топ-10 самых больших</div>
+                <div class="file-list" id="fileList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const typeData = {
+            'HEIC': { count: 43, color: '#22c55e' },
+            'JPG': { count: 33, color: '#16a34a' },
+            'PDF': { count: 14, color: '#dc2626' },
+            'MOV': { count: 3, color: '#eab308' },
+            'M4A': { count: 2, color: '#fb7185' },
+            'DOCX': { count: 2, color: '#60a5fa' },
+            'PKG': { count: 1, color: '#a855f7' },
+            'DMG': { count: 1, color: '#3b82f6' },
+            'PNG': { count: 1, color: '#8b5cf6' }
+        };
+
+        const files = [
+            { name: 'Telegram Desktop', size: '259 МБ', type: 'folder', icon: 'folder' },
+            { name: '3. Запреты.m4a', size: '133 МБ', type: 'audio', icon: 'audio' },
+            { name: 'Happ.macOS.universal.dmg', size: '125 МБ', type: 'app', icon: 'app' },
+            { name: 'node-v24.15.0.pkg', size: '97 МБ', type: 'app', icon: 'app' },
+            { name: 'Запреты.Прикладная работа.m4a', size: '70 МБ', type: 'audio', icon: 'audio' },
+            { name: '1_Курс_Целеустроение_Первая_встреча_04_03_2026.docx', size: '48 КБ', type: 'doc', icon: 'doc' },
+            { name: '2. Конспект Запреты.docx', size: '44 КБ', type: 'doc', icon: 'doc' },
+            { name: '~$явка на визу в Британию.dotx', size: '4 КБ', type: 'temp', icon: 'other' },
+            { name: '~$чта. Большая цель - 29.04.2025.docx', size: '4 КБ', type: 'temp', icon: 'other' },
+            { name: '~$спределение_участников_по_сессиям.docx', size: '4 КБ', type: 'temp', icon: 'other' }
+        ];
+
+        const iconEmoji = {
+            audio: '🎵',
+            image: '🖼',
+            video: '🎬',
+            app: '💾',
+            doc: '📄',
+            folder: '📁',
+            other: '📎',
+            temp: '📝'
+        };
+
+        // Doughnut chart
+        new Chart(document.getElementById('typeChart'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(typeData),
+                datasets: [{
+                    data: Object.values(typeData).map(v => v.count),
+                    backgroundColor: Object.values(typeData).map(v => v.color),
+                    borderColor: '#161b22',
+                    borderWidth: 3,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#21262d',
+                        titleColor: '#e6edf3',
+                        bodyColor: '#e6edf3',
+                        borderColor: '#30363d',
+                        borderWidth: 1,
+                        padding: 12,
+                        cornerRadius: 8,
+                        callbacks: {
+                            label: ctx => ` ${ctx.label}: ${ctx.parsed} файлов`
+                        }
+                    }
+                }
+            }
+        });
+
+        // Custom legend
+        const legendEl = document.getElementById('legend');
+        Object.entries(typeData).forEach(([type, { count, color }]) => {
+            legendEl.innerHTML += `
+                <div class="legend-item">
+                    <span class="legend-dot" style="background:${color}"></span>
+                    <span>${type} (${count})</span>
+                </div>
+            `;
+        });
+
+        // File list
+        const listEl = document.getElementById('fileList');
+        files.forEach((file, i) => {
+            listEl.innerHTML += `
+                <div class="file-item">
+                    <span class="file-rank ${i < 3 ? 'top3' : ''}">${i + 1}</span>
+                    <span class="file-icon ${file.icon}">${iconEmoji[file.icon]}</span>
+                    <div class="file-info">
+                        <div class="file-name">${file.name}</div>
+                        <div class="file-type">${file.type}</div>
+                    </div>
+                    <span class="file-size">${file.size}</span>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

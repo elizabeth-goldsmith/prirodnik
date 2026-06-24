@@ -1,0 +1,18 @@
+Total messages: 8 (Errors: 8, Warnings: 0)
+
+TypeError: Cannot set properties of undefined (setting 'src')
+    at https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584143&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:823:69
+TypeError: Cannot set properties of undefined (setting 'src')
+    at https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584145&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:823:69
+TypeError: Cannot set properties of undefined (setting 'src')
+    at https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584147&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:823:69
+TypeError: Cannot set properties of undefined (setting 'src')
+    at https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584151&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:656:69
+TypeError: window.adcm.call is not a function
+    at window.onload (https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584145&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:1131:22)
+TypeError: window.adcm.call is not a function
+    at window.onload (https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584143&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:1131:22)
+TypeError: window.adcm.call is not a function
+    at window.onload (https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584147&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:1131:22)
+TypeError: window.adcm.call is not a function
+    at window.onload (https://university.zerocoder.ru/pl/lite/widget/widget?&id=1584151&ref=&loc=https%3A%2F%2Fzerocoder.ru%2Fcourse-claude-code&clrtQueryData=%7B%22uid%22%3A%22P8ZAFEWEULl0-SLd0nmc4XFN94kwaKT5%22%2C%22sid%22%3A%22_8HQGzkN3ZAQRiNyWnGJ6rn6ynZsT2I0%3A1779126077001%22%7D:964:22)
