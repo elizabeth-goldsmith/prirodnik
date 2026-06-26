@@ -434,6 +434,7 @@
       font-size: 1.125rem;
       font-weight: 600;
       margin-bottom: 8px;
+      white-space: nowrap;
     }
     .pricing-price {
       font-size: 2.5rem;
@@ -524,7 +525,7 @@
       .atmosphere-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
       .program-list { grid-template-columns: repeat(4, 1fr); }
       .location-grid { grid-template-columns: 1fr 1fr; align-items: start; }
-      .pricing-grid { grid-template-columns: 1fr 1fr; gap: 32px; max-width: 800px; margin-left: auto; margin-right: auto; }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 960px; margin-left: auto; margin-right: auto; }
       .gallery-grid { grid-template-columns: repeat(4, 1fr); }
       .gallery-grid img { height: 22vh; }
       .reviews { grid-template-columns: repeat(2, 1fr); }
@@ -689,9 +690,14 @@
         </p>
         <div class="pricing-grid">
           <article class="card pricing-card anim-up">
+            <h3 class="pricing-name">Тариф «Дневной»</h3>
+            <div class="pricing-price">1 500 ₽</div>
+            <p class="pricing-desc">Приезжай в субботу на один день, без ночёвки.</p>
+          </article>
+          <article class="card pricing-card anim-up">
             <h3 class="pricing-name">Тариф «Выходной»</h3>
             <div class="pricing-price">1 900 ₽</div>
-            <p class="pricing-desc">Приезжай в субботу. Подойдет, если хочешь на день или с одной ночевкой.</p>
+            <p class="pricing-desc">Приезжай в субботу и оставайся с нами до вечера воскресенья</p>
           </article>
           <article class="card pricing-card featured anim-up">
             <h3 class="pricing-name">Тариф «Полная перезагрузка»</h3>
